@@ -4,15 +4,13 @@
 
 // Complete the following fuction
 - (NSArray *)convertToHappy:(NSArray *)sadArray {
-    NSMutableArray *result = [[NSMutableArray alloc] init];
+    NSMutableArray *result = [NSMutableArray array];
     result = [sadArray mutableCopy];
-//    for (int i = 1; i < result.count; i++) {
-//        if ([result[i] intValue] > [result[i-1] intValue] + [result[i+1] intValue]) {
-//            [result removeObjectAtIndex: i];
-//        }
-//    }
-
-
+    for (int i = 1; i < result.count; i++) {
+        if ([result[i] intValue] > [result[i-1] intValue] + [result[i+1] intValue]) {
+            [result removeObjectAtIndex: i];
+        }
+    }
 
 //    NSMutableArray *result = [[NSMutableArray alloc] init];
 //    for (int i = 1; i < sadArray.count; i++) {
@@ -21,7 +19,6 @@
 //        }
 //    }
     return result;
-//    [happyArray release];
 }
 
 @end
